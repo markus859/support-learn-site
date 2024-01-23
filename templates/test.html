@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sertifisering</title>
+    <link rel="stylesheet" href="/static/css/test-style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="homeBTN" onclick="goHome()">test</button>
+        <div class="sheet">
+            <h3>Oppsummeringsspørsmål</h3>
+            <p>
+                Dette er en kort gjennomgang av hva vi har gjennomgått. <br>
+                Ikke bruk store bokstaver i svarene, lykke til :) 
+            </p>
+            <label for="spm1">Hva er beste løsningen for å dele store filer?</label><br>
+            <input type="text" name="spm1" id="spm1" placeholder="Svar"><br>
+            <label for="spm2">Hvor deles Office 365 filer i Teams</label><br>
+            <input type="text" name="spm2" id="spm2" placeholder="Svar"><br>
+            <label for="spm3">Kan Teams møter tas opp? (y/n)</label><br>
+            <input type="text" name="spm3" id="spm3" placeholder="Svar"><br>
+            <label for="spm4">Er det en begrensing for antall chatter du kan ha i Teams? (y/n)</label><br>
+            <input type="text" name="spm4" id="spm4" placeholder="Svar"><br>
+            <label for="spm5">hvilke to steder kan du oprette møter? (xx/xx)</label><br>
+            <input type="text" name="spm5" id="spm5" placeholder="Svar (alfabetisk rekkefølge)"><br>
+            <label for="spm6">Kan alle medlemmer av et team oprette et møte? (y/n)</label><br>
+            <input type="text" name="spm6" id="spm6" placeholder="Svar"><br>
+            <button id="submit">Lever</button>
+        </div>
+
+
+    </div>
+    <script src="/static/js/test.js"></script>
+    <script>
+        function goHome() {
+            window.location.href = '/';
+        }
+    </script>
+</body>
+</html>

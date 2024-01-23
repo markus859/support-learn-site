@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meny</title>
+    <link rel="stylesheet" href="/static/css/index-style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <h3>Guidet gjennomgang</h3>
+            <ul>
+                <li>
+                    <p><a href="/g-g/page1">Start opplæring!</a></p>
+                </li>
+            </ul>
+            <h3>Microsoft Teams</h3>
+                <details>
+                    <ul>
+                        <li>
+                            <p><a href="https://www.youtube.com/watch?v=S19jrp6RLQU">Innledning for administratorer</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/g-g/page1">Innledning for bruker </a></p>
+                        </li>
+                        <li>
+                            <p><a href="/g-g/page2">Chat i Teams</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/g-g/page3">Administrere møter</a></p>
+                        </li>
+                        <li>
+                            <p><a href="/g-g/page4">Microsoft sharepoint</a></p>
+                        </li>
+
+                    
+                    </ul>
+                </details>
+            <h3>Delt arbeid</h3>
+                <details>
+                    <ul>
+                        <li>
+                            <p><a href="/g-g/page5">Samrbeid i Office 365</a></p>
+                        </li>
+                    </ul>
+                </details>
+            <h3>OneDrive</h3>
+                <details>
+                    <ul>
+                        <li>
+                            <p><a href="/g-g/page6">OneDrive</a></p>
+                        </li>
+                    </ul>
+                </details>
+        </div>
+        <div class="support">
+            <h3>Support</h3>
+            <form action="{{ url_for('index') }}" method="post">
+                <label for="name">name</label>
+                <input type="text" name="name" required><br>
+                <label for="mail">e-mail</label>
+                <input type="text" name="mail" required><br>
+                <label for="message">Message</label>
+                <input type="text" name="message" required>
+                <input type="submit">
+            </form>
+        </div>
+    </div>
+
+{% if success %}
+    <script>
+        alert('Ticket er mottatt. Support vil kontakte deg på {{mail}}.')
+    </script>
+{% endif %}
+</body>
+</html>
